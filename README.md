@@ -1,5 +1,4 @@
 # Maine-wildfires
-# Created by: Justin Baker
 # Date created: Sep 2023
 # Wildfire data collected from https://data-nifc.opendata.arcgis.com/
 # County boundary data collected from https://public.opendatasoft.com
