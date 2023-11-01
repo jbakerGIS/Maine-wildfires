@@ -22,7 +22,7 @@ states = gpd.read_file(
 
 maine = states[states['NAME'] == 'Maine']
 
-# Create a map showing each fortress location
+# Create a map showing each fire location
 ax = maine.plot(column='NAME', figsize=(9,9), alpha=0.5)
 fires.plot(ax=ax, color="red", linewidths=0)
 cx.add_basemap(ax, crs=fires.crs.to_string())
