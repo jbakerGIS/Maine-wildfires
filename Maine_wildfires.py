@@ -51,9 +51,13 @@ cf = numFires.to_frame(name='# of fires')
 # Merge the dataframes
 countyFires = pd.merge(counties, cf, on='name')
 
-countyFires.plot(column='# of fires', legend=True)
+# Create plot of wildires per county
+countyFires.plot(column='# of fires', legend=True, cmap='Reds')
 plt.title('Maine Wildfires per County in 2022')
 plt.axis('off')
 plt.show
 
-countyFires.explore()
+# Create explorable map of wild fires per county and save the map to html
+m = countyFires.explore()
+outfp = r"C:\Users\viver\OneDrive\Desktop\Portfolio\Maine\fires_explore.html"
+m.save(outfp)
