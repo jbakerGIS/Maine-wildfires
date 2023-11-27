@@ -3,6 +3,6 @@ It uses the geopandas library to create three different outputs to help visualiz
 These have been included in the repo as .png images.
 To view the html file, please download it to your computer.
 
-Date created: Sep 2023
-Wildfire data collected from https://data-nifc.opendata.arcgis.com/
-County boundary data collected from https://public.opendatasoft.com
+# Date created: Sep 2023
+# Wildfire data collected from https://data-nifc.opendata.arcgis.com/
+# County boundary data collected from https://public.opendatasoft.com
