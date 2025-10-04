@@ -1,4 +1,5 @@
-# September 2023
+# Maine Wildfire Mapping
+### September 2023
 
 This project analyzes wildfire data from the state of Maine for the year 2022. 
 It uses the geopandas library to create three different outputs to help visualize the data in different ways.
