@@ -12,6 +12,8 @@ from geopandas.geoseries import *
 
 # -------------------------------- Map wildfire locations -------------------------
 
+# TODO convert hard coded paths to relative paths with OS
+
 # Create gpd of wildfires and Maine state boundary json files
 fires = gpd.read_file(
     "C:/Users/viver/OneDrive/Desktop/Portfolio/Maine/Fires.json").to_crs('EPSG:2802')
@@ -61,3 +63,4 @@ plt.show
 m = countyFires.explore()
 outfp = r"C:\Users\viver\OneDrive\Desktop\Portfolio\Maine\fires_explore.html"
 m.save(outfp)
+
