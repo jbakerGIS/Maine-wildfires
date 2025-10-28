@@ -39,19 +39,19 @@ counties = gpd.read_file(
     "C:/Users/viver/OneDrive/Desktop/Portfolio/Maine/Counties.geojson").to_crs('EPSG:2802')
 
 # Subset only the name column
-counties = counties[['name', 'geometry']]
+counties = counties[['Name', 'Geometry']]
 
 # Spatial join the fires to the counties gdf
 cf = gpd.sjoin(fires, counties, predicate='within')
 
 # Calculate the number of fires in each county
-numFires = cf.groupby('name').size()
+numFires = cf.groupby('Name').size()
 
 # Convert the series to a DataFrame and specify column name
-cf = numFires.to_frame(name='# of fires')
+cf = numFires.to_frame(name='Number of Fires')
 
 # Merge the dataframes
-countyFires = pd.merge(counties, cf, on='name')
+countyFires = pd.merge(counties, cf, on='Name')
 
 # Create plot of wildires per county
 countyFires.plot(column='# of fires', legend=True, cmap='Reds')
@@ -63,4 +63,5 @@ plt.show
 m = countyFires.explore()
 outfp = r"C:\Users\viver\OneDrive\Desktop\Portfolio\Maine\fires_explore.html"
 m.save(outfp)
+
 
